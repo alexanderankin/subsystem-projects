@@ -14,10 +14,7 @@ public class Visualization {
     public static void main(String[] args) {
         DisposableServer server = HttpServer.create()
                 .route(rb -> {
-                    rb.get("/", (req, res) -> {
-                        log.info("redirecting to index");
-                        return res.sendRedirect("index.html");
-                    });
+                    rb.get("/", (req, res) -> res.sendRedirect("index.html"));
                     rb.directory("/", staticPath());
                 })
                 .bindAddress(() -> InetSocketAddress.createUnresolved("localhost", 8080))

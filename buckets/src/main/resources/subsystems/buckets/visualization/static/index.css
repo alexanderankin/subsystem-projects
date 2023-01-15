@@ -1,0 +1,11 @@
+#scenario-graphic-visualization, svg#scenario-graphic {
+    /*width: .75vw;*/
+    /*height: .75vh;*/
+    min-width: 400px;
+    min-height: 300px;
+}
+
+/* inside the svg */
+svg#scenario-graphic text {
+    pointer-events: none;
+}
